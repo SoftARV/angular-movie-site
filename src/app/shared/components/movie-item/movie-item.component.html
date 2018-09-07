@@ -1,0 +1,7 @@
+<div (click)="goToMovie()" class="movie">
+  <img [src]="'assets/images/movie-covers/'+movie.img" [alt]="movie.name" class="poster">
+  <div class="info">
+    <span class="title">{{movie.name}}</span>
+    <span class="rate">{{movie.rate}}/10</span>
+  </div>
+</div>
