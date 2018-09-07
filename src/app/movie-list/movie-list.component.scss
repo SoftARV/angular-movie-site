@@ -1,0 +1,44 @@
+@import "../../variables";
+
+.content {
+  padding-top: 70px;
+  background-color: #3c3c3c;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .head {
+    margin: 20px 30px 20px 30px;
+    width: 70%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    border-bottom: 2px solid $secondary-dark;
+    max-width: 1240px;
+    box-sizing: content-box;
+    .title {
+      margin: 10px 0px;
+      font-size: 24px;
+      margin: 0px 20px 0px 20px;
+      color: $secondary-light;
+    }
+    .select {
+      margin: 20px 0px;
+      width: 250px;
+      padding: 10px;
+      border-radius: 2px;
+      background-color: $secondary-light;
+      color: $dark;
+    }
+  }
+
+  .list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 1240px;
+  }
+}

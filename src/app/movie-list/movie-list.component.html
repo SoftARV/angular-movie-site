@@ -1,0 +1,17 @@
+<app-toolbar></app-toolbar>
+<div class="content">
+  <div class="head">
+    <span class="title">
+      Movie Collection
+    </span>
+    <mat-select [(value)]="genreSelected" (selectionChange)="filterByGenre()" class="select" placeholder="What genre are you looking for?">
+      <mat-option>None</mat-option>
+      <mat-option *ngFor="let genre of genreType | keyvalue" [value]="genre.value">
+        {{genre.value | capLetter}}
+      </mat-option>
+    </mat-select>
+  </div>
+  <div class="list">
+    <app-movie-item *ngFor="let movie of movies" [movie]="movie"></app-movie-item>
+  </div>
+</div>
