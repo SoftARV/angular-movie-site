@@ -1,0 +1,28 @@
+@import "../../variables";
+
+.content {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .title {
+    font-size: 2.5em;
+  }
+  .message {
+    font-size: 2em;
+    margin-top: 30px;
+  }
+  .button {
+    cursor: pointer;
+    font-size: 1.5em;
+    margin-top: 50px;
+    padding: 10px 30px 10px 30px;
+    border-radius: 20px;
+    background-color: $secondary;
+    color: $dark;
+  }
+  .button:hover {
+    background-color: $secondary-light;
+  }
+}
