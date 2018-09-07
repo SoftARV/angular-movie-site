@@ -1,0 +1,27 @@
+<app-toolbar></app-toolbar>
+<div class="content">
+  <div class="back">
+    <div (click)="goBack()" class="back-text">Movie Collection</div>
+  </div>
+  <div class="info">
+    <div class="poster">
+      <img [src]="'assets/images/movie-covers/'+movieData.img" alt="movie.name">
+    </div>
+    <div class="data">
+      <span class="title">{{movieData.name}}</span>
+      <span class="genre">
+        <span *ngFor="let genre of movieData.genres">{{genre | capLetter}} </span>
+      </span>
+      <span class="rate">{{movieData.rate}}/10</span>
+      <span class="description-title">Sinopsis</span>
+      <span class="description">{{movieData.description}}</span>
+      <span class="length-title">Duration</span>
+      <span class="length">{{movieData.length}}</span>
+    </div>
+  </div>
+  <div *ngIf="trailerLink !== null" class="trailer">
+    <span class="trailer-title">Trailer</span>
+    <iframe [src]="trailerLink | safe: 'resourceUrl'" frameborder="0">
+    </iframe>
+  </div>
+</div>
