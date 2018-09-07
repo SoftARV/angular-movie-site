@@ -1,0 +1,14 @@
+<app-toolbar></app-toolbar>
+<div class="content">
+  <div class="head">
+    <span class="title">
+      Top 5 Movies
+    </span>
+    <div class="movie-list">
+      <span (click)="goToMovies()" class="list-text">Movie Collection</span>
+    </div>
+  </div>
+  <div class="list">
+    <app-movie-item *ngFor="let movie of movies" [movie]="movie"></app-movie-item>
+  </div>
+</div>
