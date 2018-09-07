@@ -1,0 +1,24 @@
+<div class="toolbar">
+  <div class="toolbar-content">
+    <span (click)="goBack()" class="title">
+      Movies!!
+    </span>
+    <div class="search">
+      <input [formControl]="searchControl" type="text" class="search-bar" placeholder="Search...">
+      <div *ngIf="searchActive" class="results" [@searchReveal]>
+        <div *ngIf="searchResult.length > 0; else noResults">
+          <div *ngFor="let movie of searchResult" (click)="goToMovie(movie)" class="movie-result">
+            <img [src]="'assets/images/movie-covers/'+movie.img" [alt]="movie.name" class="mini-poster">
+            <div class="name">{{movie.name}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #noResults>
+  <div class="movie-result">
+    <div class="name">No Movies Found</div>
+  </div>
+</ng-template>
